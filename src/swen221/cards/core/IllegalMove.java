@@ -1,4 +1,4 @@
-package cards.core;
+package swen221.cards.core;
 
 /**
  * Use to signal an illegal move has occurred. This typically happens when a

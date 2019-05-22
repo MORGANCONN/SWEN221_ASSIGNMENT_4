@@ -1,4 +1,4 @@
-package cards.viewer;
+package swen221.cards.viewer;
 
 import java.awt.*;
 import java.awt.image.*;
@@ -9,7 +9,7 @@ import java.util.*;
 import swen221.cards.core.*;
 
 /**
- * A table canvas draws all of the cards in play during the game.
+ * A table canvas draws all of the swen221.cards in play during the game.
  * 
  * @author djp
  * 

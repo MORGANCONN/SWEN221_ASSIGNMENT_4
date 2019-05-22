@@ -1,10 +1,10 @@
-package cards.core;
+package swen221.cards.core;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Represents a trick being played. This includes the cards that have been
+ * Represents a trick being played. This includes the swen221.cards that have been
  * played so far, as well as what the suit of trumps is for this trick.
  * 
  * @author David J. Pearce
@@ -48,7 +48,7 @@ public class Trick {
 	}
 	
 	/**
-	 * Get the list of cards played so far in the order they were played.
+	 * Get the list of swen221.cards played so far in the order they were played.
 	 * 
 	 * @return
 	 */

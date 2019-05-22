@@ -1,4 +1,4 @@
-package cards.core;
+package swen221.cards.core;
 
 import java.util.List;
 import java.util.Map;

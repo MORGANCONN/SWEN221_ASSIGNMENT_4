@@ -1,13 +1,9 @@
-package cards.variations;
+package swen221.cards.variations;
 
 import java.util.List;
-import java.util.Set;
 
 import swen221.cards.core.Card;
-import swen221.cards.core.IllegalMove;
 import swen221.cards.core.Player;
-import swen221.cards.core.Trick;
-import swen221.cards.core.Player.Direction;
 import swen221.cards.util.AbstractCardGame;
 
 /**

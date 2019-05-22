@@ -1,4 +1,8 @@
-package cards.core;
+package swen221.cards.core;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 
 public class Card implements Comparable<Card> {
 	
@@ -86,7 +90,36 @@ public class Card implements Comparable<Card> {
 
 	@Override
 	public int compareTo(Card o) {
-		// TODO: you need to implement this!
-		return 0;
+		ArrayList<Suit> tempSuits = new ArrayList<Suit>(Arrays.asList(Suit.values()));
+		ArrayList<Rank> tempRank = new ArrayList<Rank>(Arrays.asList(Rank.values()));
+		if(tempSuits.indexOf(this.suit)>tempSuits.indexOf(o.suit)){
+			return 1;
+		} else if(tempSuits.indexOf(this.suit)<tempSuits.indexOf(o.suit)){
+			return -1;
+		} else if(tempSuits.indexOf(this.suit)==tempSuits.indexOf(o.suit)){
+			if(tempRank.indexOf(this.rank)>tempRank.indexOf(o.rank)){
+				return 1;
+			} else if(tempRank.indexOf(this.rank)<tempRank.indexOf(o.rank)){
+				return -1;
+			} else{
+				return 0;
+			}
+		} else{
+			return 0;
+		}
+	}
+
+	public boolean equals(Card o){
+		if(o.suit==suit&&o.rank==rank){
+			return true;
+		} else{
+			return false;
+		}
+	}
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(suit, rank);
 	}
 }

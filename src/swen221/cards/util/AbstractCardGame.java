@@ -1,4 +1,4 @@
-package cards.util;
+package swen221.cards.util;
 
 import java.util.*;
 
@@ -9,7 +9,7 @@ import swen221.cards.core.Player.Direction;
  * Represents an abstract whist-like card game. This provides a common
  * implementation of the CardGame interface, which the different variations on
  * the game can extend and modify. For example, some variations will score
- * differently. Others will deal different numbers of cards, etc.
+ * differently. Others will deal different numbers of swen221.cards, etc.
  * 
  * @author David J. Pearce
  * 
@@ -186,7 +186,7 @@ public abstract class AbstractCardGame implements CardGame {
 
 	
 	/**
-	 * Create a complete deck of 52 cards.
+	 * Create a complete deck of 52 swen221.cards.
 	 * 
 	 * @return
 	 */

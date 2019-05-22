@@ -1,6 +1,5 @@
-package cards;
+package swen221.cards;
 
-import cards.variations.ClassicWhist;
 import swen221.cards.viewer.TableFrame;
 
 public class Main {

@@ -1,4 +1,4 @@
-package cards.variations;
+package swen221.cards.variations;
 
 import java.util.List;
 

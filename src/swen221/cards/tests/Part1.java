@@ -1,4 +1,4 @@
-package cards.tests;
+package swen221.cards.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;

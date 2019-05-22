@@ -1,11 +1,11 @@
-package cards.core;
+package swen221.cards.core;
 
 import java.util.*;
 
 /**
- * Represents a hand of cards held by a player. As the current round proceeds,
- * the number of cards in the hand will decrease. When the round is over, new
- * cards will be delt and added to this hand.
+ * Represents a hand of swen221.cards held by a player. As the current round proceeds,
+ * the number of swen221.cards in the hand will decrease. When the round is over, new
+ * swen221.cards will be delt and added to this hand.
  * 
  * @author David J. Pearce
  * 
@@ -29,7 +29,7 @@ public class Hand implements Cloneable, Iterable<Card> {
 	}
 	
 	/**
-	 * Return all cards in this hand which match the given suit.
+	 * Return all swen221.cards in this hand which match the given suit.
 	 * @param suit
 	 * @return
 	 */
@@ -59,7 +59,7 @@ public class Hand implements Cloneable, Iterable<Card> {
 	}
 	
 	/**
-	 * Get number of cards in this hand.
+	 * Get number of swen221.cards in this hand.
 	 * 
 	 * @return
 	 */
@@ -68,7 +68,7 @@ public class Hand implements Cloneable, Iterable<Card> {
 	}
 	
 	/**
-	 * Remove all cards from this hand.
+	 * Remove all swen221.cards from this hand.
 	 */
 	public void clear() {
 		cards.clear();

@@ -1,15 +1,13 @@
-package cards.viewer;
+package swen221.cards.viewer;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Map;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 
 import swen221.cards.core.CardGame;
 import swen221.cards.core.Player;
-import swen221.cards.util.AbstractComputerPlayer;
 import swen221.cards.variations.*;
 
 public class ConfigurationDialog extends JDialog {

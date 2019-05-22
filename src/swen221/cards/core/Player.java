@@ -1,9 +1,9 @@
-package cards.core;
+package swen221.cards.core;
 
 /**
  * Represents a player on the board, which can be either a computer player or a
  * human. Every player has a direction (North, East, South, West) and a hand of
- * cards which they are currently playing.
+ * swen221.cards which they are currently playing.
  * 
  * @author David J. Pearce
  * 

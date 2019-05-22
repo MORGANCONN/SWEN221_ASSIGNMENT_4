@@ -1,4 +1,4 @@
-package cards.util;
+package swen221.cards.util;
 
 import swen221.cards.core.*;
 

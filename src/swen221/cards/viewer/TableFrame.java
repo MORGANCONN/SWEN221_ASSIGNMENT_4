@@ -1,4 +1,4 @@
-package cards.viewer;
+package swen221.cards.viewer;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

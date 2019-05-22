@@ -1,4 +1,4 @@
-package cards.tests;
+package swen221.cards.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static swen221.cards.core.Card.Rank.*;
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import swen221.cards.core.*;
 import swen221.cards.core.Player.Direction;
 import swen221.cards.util.AbstractCardGame;
-import cards.variations.SingleHandWhist;
+import swen221.cards.variations.SingleHandWhist;
 
 import java.util.*;
 
@@ -183,11 +183,11 @@ public class Part3 {
 	 * each have been calculated.
 	 *
 	 * @param before
-	 *            Sequence of cards to play up to clone point.
+	 *            Sequence of swen221.cards to play up to clone point.
 	 * @param afterOriginal
-	 *            Sequence of cards to play for original game (after cloning).
+	 *            Sequence of swen221.cards to play for original game (after cloning).
 	 * @param afterClone
-	 *            Sequence of cards to play for cloned game.
+	 *            Sequence of swen221.cards to play for cloned game.
 	 * @param scoresOriginal
 	 *            Expected scores at end of original game
 	 * @param scoresCloned
@@ -200,11 +200,11 @@ public class Part3 {
 		// First, create a game and deal our deck
 		SingleHandWhist game = new SingleHandWhist();
 		game.deal(Arrays.asList(DECK));
-		// Second, play all cards up to the clone point
+		// Second, play all swen221.cards up to the clone point
 		playCards(game, 0, before);
 		// Third, clone the game
 		AbstractCardGame clone = (AbstractCardGame) game.clone();
-		// Fourth, play all cards after the clone point
+		// Fourth, play all swen221.cards after the clone point
 		playCards(game, before.length, afterOriginal);
 		playCards(clone, before.length, afterClone);
 		// Fifth, sanity check the original game score
@@ -235,8 +235,8 @@ public class Part3 {
 	}
 
 	/**
-	 * Play a set of given cards in the order they occur. It is assumed that all
-	 * players have the correct cards to allow this.
+	 * Play a set of given swen221.cards in the order they occur. It is assumed that all
+	 * players have the correct swen221.cards to allow this.
 	 *
 	 * @param game
 	 *            The game we are playing.
@@ -244,7 +244,7 @@ public class Part3 {
 	 *            Gives the index through the entire game that we are starting
 	 *            at.
 	 * @param cards
-	 *            The sequence of cards to be played, in the order they are to
+	 *            The sequence of swen221.cards to be played, in the order they are to
 	 *            be played.
 	 * @throws IllegalMove
 	 */
