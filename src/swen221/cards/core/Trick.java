@@ -1,5 +1,6 @@
 package swen221.cards.core;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
  * @author David J. Pearce
  * 
  */
-public class Trick {
+public class Trick implements Serializable {
 	private Card[] cards = new Card[4];
 	private Player.Direction lead;
 	private Card.Suit trumps;
@@ -131,8 +132,20 @@ public class Trick {
 	 * these are not true, it throws an IllegalMove exception.
 	 */
 	public void play(Player p, Card c) throws IllegalMove {
-		// FIXME: we need to checks here for attempts to make illegal moves.
-		
+		if(p.direction!=getNextToPlay()){
+            throw new IllegalMove("Invalid Player");
+        }
+		if(!p.hand.contains(c)){
+			throw new IllegalMove("Hand does not contain "+c.toString()+'\n');
+		} else if(lead!=p.direction){
+			if(c.suit()!=getCardPlayed(getLeadPlayer()).suit()){
+				for(Card C: p.hand){
+					if(C.suit()==getCardPlayed(getLeadPlayer()).suit()){
+						throw new IllegalMove("Invalid Suit, Has Correct Non Trump Suit\nExpected: "+trumps+" Actual: "+c.suit()+'\n');
+					}
+				}
+			}
+		}
 		// Finally, play the card.
 		for (int i = 0; i != 4; ++i) {
 			if (cards[i] == null) {
@@ -141,5 +154,18 @@ public class Trick {
 				break;
 			}
 		}
+	}
+
+	public Card getLeadingCard(){
+		Card toReturn = null;
+		for (Card C: cards) {
+			if(toReturn == null){
+				toReturn = C;
+			}
+			if(C.compareTo(toReturn)>0){
+				toReturn = C;
+			}
+		}
+		return toReturn;
 	}
 }

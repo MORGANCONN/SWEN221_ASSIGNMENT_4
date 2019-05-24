@@ -1,10 +1,11 @@
 package swen221.cards.core;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Card implements Comparable<Card> {
+public class Card implements Comparable<Card>, Serializable {
 	
 	/**
 	 * Represents a card suit.

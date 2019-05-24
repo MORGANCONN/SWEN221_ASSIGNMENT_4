@@ -1,5 +1,6 @@
 package swen221.cards.core;
 
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -10,7 +11,7 @@ import java.util.*;
  * @author David J. Pearce
  * 
  */
-public class Hand implements Cloneable, Iterable<Card> {
+public class Hand implements Cloneable, Iterable<Card>, Serializable {
 	private SortedSet<Card> cards = new TreeSet<Card>();
 	
 

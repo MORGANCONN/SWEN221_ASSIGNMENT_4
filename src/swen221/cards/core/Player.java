@@ -1,5 +1,7 @@
 package swen221.cards.core;
 
+import java.io.Serializable;
+
 /**
  * Represents a player on the board, which can be either a computer player or a
  * human. Every player has a direction (North, East, South, West) and a hand of
@@ -8,7 +10,7 @@ package swen221.cards.core;
  * @author David J. Pearce
  * 
  */
-public class Player {
+public class Player implements Serializable {
 	
 	/**
 	 * Represents one of the four position on the table (North, East, South and

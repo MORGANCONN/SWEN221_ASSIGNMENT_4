@@ -1,7 +1,9 @@
 package swen221.cards.util;
 
+import java.io.*;
 import java.util.*;
 
+import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 import swen221.cards.core.*;
 import swen221.cards.core.Player.Direction;
 
@@ -14,7 +16,7 @@ import swen221.cards.core.Player.Direction;
  * @author David J. Pearce
  * 
  */
-public abstract class AbstractCardGame implements CardGame {
+public abstract class AbstractCardGame implements CardGame, Serializable {
 	
 	/**
 	 * A map of positions around the table to the players in the game.
@@ -62,11 +64,22 @@ public abstract class AbstractCardGame implements CardGame {
 		// java.lang.Object. This creates a shallow copy of the card game. For
 		// Part 3 of the assignment, you need to reimplement this to perform a
 		// deep clone.
+		ObjectInputStream inputStream = null;
+		ObjectOutputStream objectOutputStream = null;
+
 		try {
-			return (CardGame) super.clone();
-		} catch(CloneNotSupportedException e) {
-			return null; // dead code
+			ByteArrayOutputStream cloneByteArrayOutput = new ByteArrayOutputStream();
+			objectOutputStream = new ObjectOutputStream(cloneByteArrayOutput);
+			objectOutputStream.writeObject(this);
+			ByteArrayInputStream cloneByteArrayInput = new ByteArrayInputStream(cloneByteArrayOutput.toByteArray());
+			inputStream = new ObjectInputStream(cloneByteArrayInput);
+			return (CardGame) inputStream.readObject();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
 		}
+		return null;
 	}
 	
 	// ========================================================
