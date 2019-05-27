@@ -110,6 +110,11 @@ public class Card implements Comparable<Card>, Serializable {
 		}
 	}
 
+	/**
+	 * Returns true if the cards are equal
+	 * @param o the card to check for equality
+	 * @return returns true if equal or false if not
+	 */
 	public boolean equals(Card o){
 		if(o.suit==suit&&o.rank==rank){
 			return true;
@@ -117,6 +122,7 @@ public class Card implements Comparable<Card>, Serializable {
 			return false;
 		}
 	}
+
 
 
 	@Override

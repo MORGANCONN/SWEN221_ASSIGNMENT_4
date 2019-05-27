@@ -159,11 +159,13 @@ public class Trick implements Serializable {
 	public Card getLeadingCard(){
 		Card toReturn = null;
 		for (Card C: cards) {
-			if(toReturn == null){
-				toReturn = C;
-			}
-			if(C.compareTo(toReturn)>0){
-				toReturn = C;
+			if (C != null) {
+				if (toReturn == null) {
+					toReturn = C;
+				}
+				if (C.compareTo(toReturn) > 0) {
+					toReturn = C;
+				}
 			}
 		}
 		return toReturn;
